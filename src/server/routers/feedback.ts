@@ -1,11 +1,8 @@
 import { createRouter } from "../createRouter";
-import { z } from "zod";
+import { feedback } from "../../zodSchema/feedback";
 
 export const feedbackRouter = createRouter().mutation("add", {
-  input: z.object({
-    id: z.string().uuid().optional(),
-    text: z.string().min(1),
-  }),
+  input: feedback,
   resolve: ({ input }) => {
     return input;
   },
