@@ -1,6 +1,7 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
 import { createRouter } from "../createRouter";
+import { blogpostRouter } from "./blogpost";
 import { feedbackRouter } from "./feedback";
 
 export const appRouter = createRouter()
@@ -16,7 +17,8 @@ export const appRouter = createRouter()
       };
     },
   })
-  .merge("feedback.", feedbackRouter);
+  .merge("feedback.", feedbackRouter)
+  .merge("blogpost.", blogpostRouter);
 
 // export type definition of API
 export type AppRouter = typeof appRouter;

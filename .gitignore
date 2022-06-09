@@ -34,6 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+
+# next-pwa
 **/public/workbox-*.js
 **/public/workbox-*.js.map
 **/public/sw.js
@@ -41,3 +43,5 @@ yarn-error.log*
 **/public/worker-*.js
 **/public/workbox-*.js.map
 **/public/fallback-development.js
+
+.env
