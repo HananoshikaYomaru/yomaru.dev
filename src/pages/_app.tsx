@@ -1,17 +1,41 @@
 import "../styles/globals.css";
+import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "../server/routers/_app";
 import Head from "next/head";
+import { useEffect } from "react";
+
 import { appWithTranslation } from "next-i18next";
+import AOS from "aos";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import { ThemeProvider } from "../contexts/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: "phone",
+      duration: 600,
+      easing: "ease-out-sine",
+    });
+  });
   return (
     <>
       <Head>
         <title>Yomaru</title>
       </Head>
-      <Component {...pageProps} />
+      <NextThemeProvider
+        themes={["light", "dark"]}
+        attribute="data-theme"
+        enableSystem={false}
+        defaultTheme="light"
+        enableColorScheme={false}
+      >
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </NextThemeProvider>
     </>
   );
 }

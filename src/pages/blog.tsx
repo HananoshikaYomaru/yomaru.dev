@@ -11,6 +11,7 @@ import {
 import { searchClient } from "../utils/algolia";
 import { useEffect, useState } from "react";
 import React from "react";
+import Layout from "../components/Layout";
 
 const CustomSearchBox = () => {
   const [value, setValue] = useState("");
@@ -72,49 +73,51 @@ const Home = () => {
   // });
   const { t } = useTranslation("common");
   return (
-    <div className="w-full flex flex-col items-center">
-      <Link href="/">
-        <button className="bg-blue-200">{t("go-back")}</button>
-      </Link>
-      <p className="font-bold text-3xl ">Blog</p>
-      <InstantSearch indexName="posts" searchClient={searchClient}>
-        <CustomSearchBox></CustomSearchBox>
+    <Layout>
+      <div className="w-full flex flex-col items-center">
+        <Link href="/">
+          <button className="bg-blue-200">{t("go-back")}</button>
+        </Link>
+        <p className="font-bold text-3xl ">Blog</p>
+        <InstantSearch indexName="posts" searchClient={searchClient}>
+          <CustomSearchBox></CustomSearchBox>
 
-        <CustomHits></CustomHits>
-      </InstantSearch>
-      {/* {posts.data ? (
-        <div className="grid grid-cols-2 gap-5 my-10 mx-5">
-          {posts.data.map((post) => {
-            return (
-              <div
-                key={post.slug}
-                id={post.slug}
-                className="rounded-md border shadow p-2"
-              >
-                <p id="title" className="text-3xl font-bold">
-                  {post.title}
-                </p>
-                <img src={post.coverImage.url} alt="cover image" />
-                <div id="author">
-                  <img
-                    src={post.author.picture.url}
-                    alt="author image"
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <p id="name">{post.author.name}</p>
-                  <p id="description">{post.author.description}</p>
-                </div>
-                <p id="date">{post.date}</p>
-                <p id="excerpt">{post.excerpt}</p>
-                <p id="content">{post.content}</p>
+          <CustomHits></CustomHits>
+        </InstantSearch>
+        {/* {posts.data ? (
+      <div className="grid grid-cols-2 gap-5 my-10 mx-5">
+        {posts.data.map((post) => {
+          return (
+            <div
+              key={post.slug}
+              id={post.slug}
+              className="rounded-md border shadow p-2"
+            >
+              <p id="title" className="text-3xl font-bold">
+                {post.title}
+              </p>
+              <img src={post.coverImage.url} alt="cover image" />
+              <div id="author">
+                <img
+                  src={post.author.picture.url}
+                  alt="author image"
+                  className="w-10 h-10 rounded-full"
+                />
+                <p id="name">{post.author.name}</p>
+                <p id="description">{post.author.description}</p>
               </div>
-            );
-          })}
-        </div>
-      ) : (
-        <div>still fetching....</div>
-      )} */}
-    </div>
+              <p id="date">{post.date}</p>
+              <p id="excerpt">{post.excerpt}</p>
+              <p id="content">{post.content}</p>
+            </div>
+          );
+        })}
+      </div>
+    ) : (
+      <div>still fetching....</div>
+    )} */}
+      </div>
+    </Layout>
   );
 };
 

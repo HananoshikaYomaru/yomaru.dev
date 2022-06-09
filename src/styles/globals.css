@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@tailwind screens;
+
+/* tailwind is configured to prefer this font */
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/Matter-Medium.woff2") format("woff2"),
+    url("/fonts/Matter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/Matter-Regular.woff2") format("woff2"),
+    url("/fonts/Matter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
+a {
+  background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
+    no-repeat;
+  transition: 0.5s background-size;
+}
+
+a.animate-underline:hover,
+a.animate-underline-left:hover,
+a.animate-underline-right:hover {
+  background-size: 100% 0.1em;
+}
+
+/* Variations */
+a.animate-underline-left {
+  background-position: left bottom;
+}
+
+a.animate-underline-right {
+  background-position: right bottom;
+}
+
+.focus-ring:hover,
+.focus-ring:focus {
+  @apply ring-2 ring-offset-4 ring-black dark:ring-white dark:ring-offset-gray-900 shadow-lg shadow-black/30 dark:shadow-white/50;
+}
+
+.animate-bouncing:hover svg {
+  @apply animate-twBounce animate-infinite;
+}
+
+.animate-bouncing:hover button {
+  @apply bg-gray-100 border-gray-600;
+}

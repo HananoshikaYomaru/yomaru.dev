@@ -9,6 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { feedback } from "../zodSchema/feedback";
 import { useEffect, useState } from "react";
 import Pusher from "pusher-js";
+import Layout from "../components/Layout";
+import HomeHero from "../components/HomeHero";
 
 type FormInput = {
   name: string;
@@ -55,45 +57,8 @@ const Home: NextPage = () => {
   //   return <div>Loading...</div>;
   // }
   return (
-    <div className="flex flex-col items-center mt-10">
-      <img
-        src="/icon-512x512.png"
-        width="200"
-        height="200"
-        className="animate-bounceIn rounded-lg shadow-lg shadow-black/50 mb-3"
-      ></img>
-      {/* <p>{hello.data.greeting}</p> */}
-      <p>{process.env.NEXT_PUBLIC_PUSHER_API_KEY}</p>
-      <p>{t("hello")}</p>
-      <Link href="/" locale={"en"}>
-        <button className="m-2 bg-blue-200">change locale (en)</button>
-      </Link>
-      <Link href="/" locale={"ja"}>
-        <button className="m-2 bg-blue-200">change locale (ja)</button>
-      </Link>
-      <Link href="/" locale={"zh"}>
-        <button className="m-2 bg-blue-200">change locale (zh)</button>
-      </Link>
-      <div className="flex flex-row space-x-4 items-center">
-        <Link href="/blog">
-          <button className="m-2 bg-blue-200">Blog</button>
-        </Link>
-        <Link href="/photos">
-          <button className="m-2 bg-blue-200">Photos</button>
-        </Link>
-        {/* music, movie, books */}
-        <Link href="/habits">
-          <button className="m-2 bg-blue-200">Habits</button>
-        </Link>
-      </div>
-      {/* About me */}
-      <div>
-        <p className="text-3xl font-bold capitalize">About me</p>
-      </div>
-      <div>
-        <p className="text-3xl font-bold capitalize">My skills</p>
-      </div>
-
+    <Layout>
+      <HomeHero></HomeHero>
       {/* form */}
       <form
         onSubmit={handleSubmit(async (data) => {
@@ -144,7 +109,7 @@ const Home: NextPage = () => {
           );
         })}
       </div>
-    </div>
+    </Layout>
   );
 };
 

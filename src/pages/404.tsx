@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 
 const Home = () => {
-  return <Layout>you are offline</Layout>;
+  return <Layout>page not found</Layout>;
 };
 
 export default Home;
