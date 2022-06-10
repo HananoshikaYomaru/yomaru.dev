@@ -136,7 +136,7 @@ const Footer = () => {
                   id="5-email-error"
                   className="text-sm text-red-500"
                 >
-                  That's not an email
+                  That&lsquo;s not an email
                 </p>
               </div>
               <input
