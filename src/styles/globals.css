@@ -54,7 +54,7 @@ a.animate-underline-right {
 }
 
 .animate-bouncing:hover svg {
-  @apply animate-twBounce animate-infinite;
+  @apply animate-bounce;
 }
 
 .animate-bouncing:hover button {
