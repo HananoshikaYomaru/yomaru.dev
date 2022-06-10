@@ -53,9 +53,6 @@ const Home: NextPage = () => {
 
   const { t } = useTranslation("common");
 
-  // if (!hello.data) {
-  //   return <div>Loading...</div>;
-  // }
   return (
     <Layout>
       <HomeHero></HomeHero>

@@ -1,0 +1,20 @@
+.slideshow {
+  position: relative;
+
+  @apply overflow-x-hidden;
+}
+.images {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300%;
+  animation: slideshow 40s linear infinite;
+}
+@keyframes slideshow {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -200%;
+  }
+}

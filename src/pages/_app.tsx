@@ -10,6 +10,7 @@ import { appWithTranslation } from "next-i18next";
 import AOS from "aos";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { ThemeProvider } from "../contexts/theme";
+import { LayoutProvider } from "../contexts/layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         enableColorScheme={false}
       >
         <ThemeProvider>
-          <Component {...pageProps} />
+          <LayoutProvider>
+            <Component {...pageProps} />
+          </LayoutProvider>
         </ThemeProvider>
       </NextThemeProvider>
     </>
