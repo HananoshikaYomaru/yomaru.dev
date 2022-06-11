@@ -22,17 +22,17 @@
       1. [ ] feature posts similar to about
       2. [ ] recent posts similar to https://theodorusclarence.com/
    3. [ ] previous work
-   4. [ ] my poems
-   5. [ ] my music
-   6. [ ] my favourite tech stack
-   7. [ ] leave me a message
+   4. [ ] leave me a message
+   5. [ ] my poems
+   6. [ ] my music
+   7. [ ] my favourite tech stack
 
 2. [ ] Hobbies
 
    1. [ ] That's what I called music
    2. [ ] Sports
    3. [ ] poems
-   4. [ ]
+   4. [ ] Church
 
 3. [ ] About
    1. [ ] tech stack and skill graph

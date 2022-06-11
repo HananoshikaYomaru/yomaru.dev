@@ -112,9 +112,9 @@ const Home = () => {
           </p>
           <p className="max-w-full text-lg  mb-12 prose prose-light dark:prose-dark">
             You can be the smartest and most skilled software engineer in the
-            world, but if you're not kind to those with whom you interact,
-            you'll never reach your full potential and you'll always be chasing
-            the next thing to bring you happiness in life. Be kind.
+            world, but if you&apos;re not kind to those with whom you interact,
+            you&apos;ll never reach your full potential and you&apos;ll always
+            be chasing the next thing to bring you happiness in life. Be kind.
           </p>
           <p className="text-lg font-medium text-black dark:text-white mb-4">
             Share knowledge
@@ -123,7 +123,7 @@ const Home = () => {
             One of the biggest things that has helped me learn is by committing
             myself to sharing what I know with others. Between podcasts, blog
             posts, talks, and workshops, I force myself into situations where I
-            have to be accountable to those I'm teaching to really know my
+            have to be accountable to those I&apos;m teaching to really know my
             stuff. And as a result, a lot of people have learned from me as
             well.
           </p>
@@ -131,12 +131,12 @@ const Home = () => {
             Collaborate with others
           </p>
           <p className="max-w-full text-lg  mb-12 prose prose-light dark:prose-dark">
-            I've worked with a ton of developers in my role as a team member at
-            companies I've worked at as well as in the open source community.
-            I've found it to be invaluable to collaborate well with others. I
-            value giving credit where it is due and celebrating the successes of
-            others with them. We can accomplish much more together than
-            separately.
+            I&apos;ve worked with a ton of developers in my role as a team
+            member at companies I&apos;ve worked at as well as in the open
+            source community. I&apos;ve found it to be invaluable to collaborate
+            well with others. I value giving credit where it is due and
+            celebrating the successes of others with them. We can accomplish
+            much more together than separately.
           </p>
         </div>
       </div>
