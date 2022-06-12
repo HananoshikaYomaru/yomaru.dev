@@ -43,6 +43,7 @@
     "react-svg-blob": "^0.3.0",
     "tabler-icons-react": "^1.48.1",
     "three": "^0.140.0",
+    "usehooks-ts": "^2.5.4",
     "zod": "^3.14.4"
   },
   "devDependencies": {

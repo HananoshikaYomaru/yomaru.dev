@@ -7,7 +7,7 @@ const Music = () => {
         <div className=" mb-12 flex flex-col lg:flex-row items-start lg:items-end justify-between">
           <div className="mb-6 lg:mb-0">
             <p className="leading-tight text-3xl md:text-4xl text-black dark:text-white ">
-              That's what I call music.
+              That&apos;s what I call music.
             </p>
             <p className="text-lg">
               I shortlisted 20 songs of the {new Date().getFullYear() - 1}.

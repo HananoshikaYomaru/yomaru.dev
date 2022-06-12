@@ -10,11 +10,12 @@ import {
 import moment from "moment";
 import styles from "../css/slideshow.module.css";
 import GoToButton from "../components/GoToButton";
+import GoodQualities from "../components/about/GoodQualities";
 const Home = () => {
   return (
     <Layout>
-      <div className="grid grid-col-1 md:grid-cols-2  gap-x-32 mx-[10vw]  place-items-center gap-y-20 ">
-        <p className="col-span-full text-4xl text-gray-900 font-bold mt-10">
+      <div className="grid grid-col-1 md:grid-cols-2  gap-x-32 mx-[12vw]  place-items-center gap-y-20 ">
+        <p className="col-span-full text-4xl md:text-4xl text-gray-900 font-bold mt-10 mx-3">
           More than just a developer porfolio...
         </p>
         <div className="col-span-full lg:col-span-1 ">
@@ -52,7 +53,7 @@ const Home = () => {
           Some background about me
         </div>
         {/* <div className="rounded bg-gray-200 col-span-full lg:col-span-3 lg:row-start-2 lg:col-start-1 m-10 shadow-lg"></div> */}
-        <div className=" text-lg prose  max-w-none col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1 text-justify lg:row-span-2">
+        <div className="text-lg  w-[76vw] text-justify prose col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1  lg:row-span-2">
           <p>
             I am a {moment().diff(moment("1999-08-27"), "years")} year old
             software engineer based in Hong Kong. I had two bachelor degrees,
@@ -146,47 +147,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mx-[12vw] mt-36">
-        <p className="leading-tight text-3xl md:text-4xl text-black dark:text-white">
-          Some of my strength and good characters that others and I recognise.
-        </p>
-      </div>
-      <div className={`${styles.slideshow} h-96 mt-16`}>
-        <div className={`${styles.images} h-96 flex flex-row`}>
-          <div className="h-96 w-[100%] ">
-            <div className=" grid grid-rows-4 md:grid-rows-3 lg:grid-rows-2 grid-cols-5 h-full ">
-              <div className="col-span-2 row-start-1 col-start-1 bg-gray-500  rounded m-5"></div>
-              <div className="col-span-2 row-start-2 col-start-2 bg-gray-500  rounded  m-5"></div>
-              <div className="col-span-2 row-start-1 col-start-3 bg-gray-500  rounded  m-5"></div>
-              <div className="col-span-2 row-start-2 col-start-4 bg-gray-500  rounded  m-5"></div>
-              <div className="col-span-1 row-start-2 col-start-1 bg-red-500  rounded m-5"></div>
-              <div className="col-span-1 row-start-1 col-start-5 bg-red-500  rounded m-5"></div>
-            </div>
-          </div>
-          <div className="h-96 w-[100%] ">
-            <div className=" grid grid-rows-2 grid-cols-5 h-full ">
-              <div className="col-span-2 row-start-1 col-start-1 bg-red-500 m-5 rounded "></div>
-              <div className="col-span-2 row-start-2 col-start-2 bg-red-500 m-5 rounded "></div>
-              <div className="col-span-2 row-start-1 col-start-3 bg-red-500 m-5 rounded "></div>
-              <div className="col-span-2 row-start-2 col-start-4 bg-red-500 m-5 rounded "></div>
-              <div className="col-span-1 row-start-2 col-start-1 bg-gray-500 m-5 rounded"></div>
-              <div className="col-span-1 row-start-1 col-start-5 bg-gray-500 m-5 rounded"></div>
-            </div>
-          </div>
-          <div className="h-96 w-[100%] ">
-            <div className="h-96 w-[100%] ">
-              <div className="  grid grid-rows-2 grid-cols-5 h-full ">
-                <div className="col-span-2 row-start-1 col-start-1 bg-gray-500 m-5 rounded "></div>
-                <div className="col-span-2 row-start-2 col-start-2 bg-gray-500 m-5 rounded "></div>
-                <div className="col-span-2 row-start-1 col-start-3 bg-gray-500 m-5 rounded "></div>
-                <div className="col-span-2 row-start-2 col-start-4 bg-gray-500 m-5 rounded "></div>
-                <div className="col-span-1 row-start-2 col-start-1 bg-red-500 m-5 rounded"></div>
-                <div className="col-span-1 row-start-1 col-start-5 bg-red-500 m-5 rounded"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* good qualities */}
+      <GoodQualities></GoodQualities>
 
       {/* fun facts */}
       <div className="mx-[12vw] mt-36">

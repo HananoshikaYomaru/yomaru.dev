@@ -3,18 +3,28 @@
 
   @apply overflow-x-hidden;
 }
+
 .images {
   position: absolute;
   left: 0;
   top: 0;
-  width: 300%;
-  animation: slideshow 40s linear infinite;
+  width: 400%;
+  animation: slideshow linear infinite;
 }
+
 @keyframes slideshow {
   0% {
     left: 0%;
   }
   100% {
-    left: -200%;
+    left: -300%;
   }
+}
+
+.slidepane {
+  @apply h-full w-[100%]  grid grid-rows-3 lg:grid-rows-2 grid-cols-6 md:grid-cols-8 lg:grid-cols-12;
+}
+
+.bubble {
+  @apply bg-gray-200  rounded-full m-2 md:m-5 flex items-center justify-center border shadow-lg text-sm md:text-base lg:text-lg  col-span-3 md:col-span-4 hover:ring-1 ring-offset-4 ring-cyan-500 transition text-center px-3 md:px-8;
 }

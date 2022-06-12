@@ -7,7 +7,9 @@ const ThisIsMusic = () => {
     <div className="mx-[12vw] mt-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <p className="text-4xl xl:text-5xl mb-6">That's what I call music!</p>
+          <p className="text-4xl xl:text-5xl mb-6">
+            That&apos;s what I call music!
+          </p>
           <p className="lg:text-lg mb-6">
             I short list my favourite songs among my recent playlists every
             week. The idea is come from{" "}
@@ -16,8 +18,9 @@ const ThisIsMusic = () => {
                 className="underline"
                 href="http://www.nowthatsmusic.com/"
                 target="_blank"
+                rel="noreferrer"
               >
-                Now That's What I Call Music
+                Now That&apos;s What I Call Music
               </a>
             </span>
             . But instead of only focusing on western stream, my shortlisted
