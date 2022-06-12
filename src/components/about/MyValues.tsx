@@ -43,12 +43,12 @@ const MyValues = () => {
           Follow your heart
         </p>
         <p className="max-w-full text-lg  mb-12 prose prose-light dark:prose-dark">
-          Steve Jobs said, "Death is very likely the single best invention of
-          Life. It is Life's change agent." Because of death, we know what we
-          truly want in our life and we strive for them. At that moment, our
-          lives become meaningful and we got the courage to follow our heart.
-          After all the hard times and suffering, You will eventually become a
-          much better person, which is closer to your ideal.
+          Steve Jobs said, &quot;Death is very likely the single best invention
+          of Life. It is Life&apos;s change agent.&quot; Because of death, we
+          know what we truly want in our life and we strive for them. At that
+          moment, our lives become meaningful and we got the courage to follow
+          our heart. After all the hard times and suffering, You will eventually
+          become a much better person, which is closer to your ideal.
         </p>
       </div>
     </div>
