@@ -5,6 +5,7 @@ import ThemeButton from "./ThemeButton";
 import MenuBurger from "./MenuBurger";
 import useLayout from "../contexts/layout";
 import { Fragment } from "react";
+import useBreakpoint from "../hooks/useBreakpoint";
 
 export const sitemap = [
   {
@@ -34,12 +35,12 @@ export const sitemap = [
 ];
 
 const Header = () => {
-  const { showMenu } = useLayout();
+  const { realShowMenu, bp } = useLayout();
   return (
     <>
-      <div className="px-[5vw] flex flex-row items-center justify-between my-10">
+      <div className="px-[5vw] flex flex-row items-center justify-between my-5 md:my-10">
         <Link href="/">
-          <a className="text-3xl font-bold capitalize animate-underline-left w-min md:whitespace-nowrap">
+          <a className="text-xl md:text-3xl font-bold capitalize animate-underline-left md:whitespace-nowrap">
             Hananoshika Yomaru
           </a>
         </Link>
@@ -63,24 +64,33 @@ const Header = () => {
         {/* button control */}
         <div className="flex flex-row space-x-3">
           <MenuBurger></MenuBurger>
-          <ThemeButton />
-          <LocaleButton></LocaleButton>
+          {(bp == "lg" || bp == "xl") && (
+            <>
+              <ThemeButton></ThemeButton>
+              <LocaleButton></LocaleButton>
+            </>
+          )}
         </div>
       </div>
+      {/* the burger menu  */}
       <div
         className={`${
-          showMenu ? "flex" : "hidden"
+          realShowMenu ? "flex" : "hidden"
         } border-t border-gray-200 flex-col items-center`}
       >
         {sitemap.map((site) => {
           return (
             <Link key={site.href} href={site.href}>
-              <a className="text-3xl border-b w-full h-20 hover:bg-gray-100 flex items-center justify-center">
+              <a className="text-lg md:text-3xl border-b w-full h-16 md:h-20 hover:bg-gray-100 flex items-center justify-center">
                 {site.text}
               </a>
             </Link>
           );
         })}
+        <div className="flex flex-row space-x-3 h-16 md:h-20 items-center">
+          <ThemeButton></ThemeButton>
+          <LocaleButton></LocaleButton>
+        </div>
       </div>
     </>
   );

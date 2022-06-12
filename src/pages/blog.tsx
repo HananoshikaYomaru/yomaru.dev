@@ -74,17 +74,12 @@ const Home = () => {
   const { t } = useTranslation("common");
   return (
     <Layout>
-      <div className="w-full flex flex-col items-center">
-        <Link href="/">
-          <button className="bg-blue-200">{t("go-back")}</button>
-        </Link>
-        <p className="font-bold text-3xl ">Blog</p>
-        <InstantSearch indexName="posts" searchClient={searchClient}>
+      {/* <InstantSearch indexName="posts" searchClient={searchClient}>
           <CustomSearchBox></CustomSearchBox>
 
           <CustomHits></CustomHits>
-        </InstantSearch>
-        {/* {posts.data ? (
+        </InstantSearch> */}
+      {/* {posts.data ? (
       <div className="grid grid-cols-2 gap-5 my-10 mx-5">
         {posts.data.map((post) => {
           return (
@@ -116,7 +111,6 @@ const Home = () => {
     ) : (
       <div>still fetching....</div>
     )} */}
-      </div>
     </Layout>
   );
 };

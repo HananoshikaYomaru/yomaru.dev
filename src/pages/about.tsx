@@ -2,9 +2,14 @@ import Layout from "../components/Layout";
 import CloudinaryImg from "../components/CloudinaryImg";
 
 import Link from "next/link";
-import { ArrowDownIcon } from "@radix-ui/react-icons";
+import {
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from "@radix-ui/react-icons";
 import moment from "moment";
 import styles from "../css/slideshow.module.css";
+import GoToButton from "../components/GoToButton";
 const Home = () => {
   return (
     <Layout>
@@ -219,10 +224,7 @@ const Home = () => {
           <p className="leading-tight text-3xl md:text-4xl text-black dark:text-white">
             Have a look at my writing.
           </p>
-          <div className="text-primary inline-flex items-center text-left font-medium focus:outline-none cursor-pointer transition">
-            <p className="mr-8 text-xl font-medium">See the full blog</p>
-            <div className="relative inline-flex h-14 w-14 flex-none items-center justify-center p-1 border rounded-full"></div>
-          </div>
+          <GoToButton text="See my full blog" href="/blog"></GoToButton>
         </div>
         <div className="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl gap-y-16 mt-16">
           <div className="col-span-4">
