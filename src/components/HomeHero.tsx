@@ -62,11 +62,11 @@ const HomeHero = () => {
           </div>
         </div>
 
-        <GoToButton
+        {/* <GoToButton
           href=""
           text="Learn more about Yomaru"
           direction="down"
-        ></GoToButton>
+        ></GoToButton> */}
       </div>
       <div className="flex items-center justify-center mb-12 col-span-full lg:mb-0 lg:col-span-7 lg:col-start-6 lg:-mt-24 lg:-mr-5vw lg:px-0">
         <img

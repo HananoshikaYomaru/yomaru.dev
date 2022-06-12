@@ -61,7 +61,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="row-span-2 row-start-3 col-span-full md:col-span-5 md:row-start-2 md:col-start-1 xl:row-start-1 xl:col-span-4 xl:col-start-9 xl:block">
+        <div className="hidden row-span-2 row-start-3 col-span-full md:col-span-5 md:row-start-2 md:col-start-1 xl:row-start-1 xl:col-span-4 xl:col-start-9 xl:block">
           <p className="text-xl font-medium text-black dark:text-white ">
             Stay up to date
           </p>

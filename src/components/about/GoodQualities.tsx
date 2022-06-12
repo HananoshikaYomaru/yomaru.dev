@@ -48,8 +48,10 @@ const Section3 = () => {
   return (
     <div className={styles.slidepane}>
       <Bubble>Have a lot of interests and hobbies</Bubble>
-      <Bubble>Easy going</Bubble>
-      <Bubble>Spiritual and philosophical thinking</Bubble>
+      <Bubble>
+        Good explainer, explain difficult concepts in easy language
+      </Bubble>
+      <Bubble>Spiritual and philosophical thinking, always inspiring</Bubble>
       <Bubble>Logical and systematic thinking</Bubble>
       <Bubble>Visionary, predict problems before actaully happens</Bubble>
       <Bubble>Humble, ask questions, not shyly</Bubble>
@@ -80,11 +82,15 @@ const GoodQualities = () => {
           Some of my strength and good characters that others and I recognise.
         </p>
       </div>
-      <div className={`${styles.slideshow} h-72 md:h-96 mt-16 w-screen`}>
+      <div className={`${styles.slideshow} h-[300px] md:h-96 mt-16 w-screen`}>
         <div
-          className={`${styles.images} h-72 md:h-96 flex flex-row`}
+          className={`${styles.images} h-72 md:h-96 flex flex-row `}
           style={{
-            animationDuration: bp == "lg" || bp == "xl" ? "70s" : "50s",
+            animationDuration:
+              (bp == "xl" && "100s") ||
+              (bp == "lg" && "80s") ||
+              (bp == "md" && "60s") ||
+              "50s",
             animationPlayState: hover ? "paused" : "running",
           }}
         >

@@ -12,22 +12,22 @@ export const sitemap = [
     href: "/",
     text: "Home",
   },
-  {
-    href: "/blog",
-    text: "Blog",
-  },
+  // {
+  //   href: "/blog",
+  //   text: "Blog",
+  // },
   {
     href: "/work",
     text: "Work",
   },
-  {
-    href: "/gallery",
-    text: "Gallery",
-  },
-  {
-    href: "/hobbies",
-    text: "Hobbies",
-  },
+  // {
+  //   href: "/gallery",
+  //   text: "Gallery",
+  // },
+  // {
+  //   href: "/hobbies",
+  //   text: "Hobbies",
+  // },
   {
     href: "/about",
     text: "About",
