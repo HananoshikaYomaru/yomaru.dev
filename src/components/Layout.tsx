@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { ArrowUp } from "tabler-icons-react";
+import { ArrowUp, AlertOctagon } from "tabler-icons-react";
 import useLayout from "../contexts/layout";
 import useBreakpoint from "../hooks/useBreakpoint";
 
@@ -10,10 +10,12 @@ import useBreakpoint from "../hooks/useBreakpoint";
  */
 const Layout = ({ children }: { children?: React.ReactNode }) => {
   const { showMenu, realShowMenu } = useLayout();
-
   return (
-    <div className="min-h-screen pt-1 text-gray-700 bg-white min-w-screen dark:bg-gray-900 dark:text-gray-200">
-      <div></div>
+    <div className="min-h-screen text-gray-700 bg-white min-w-screen dark:bg-gray-900 dark:text-gray-200">
+      <div className="bg-blue-200  w-full px-5 md:px-10 py-4 text-center">
+        <AlertOctagon className="w-6 h-6 inline-block"></AlertOctagon>
+        <span className="ml-4">My blog is comming soon.</span>
+      </div>
       {/* affix scroll up button  */}
       <button
         className={`text-gray-400 hover:text-gray-600 hover:bg-gray-100 ${
@@ -31,7 +33,7 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
         {children}
       </div>
       {/* footer */}
-      <div className={`min-h-screen mt-36 ${realShowMenu ? "hidden" : ""}`}>
+      <div className={` mt-36 ${realShowMenu ? "hidden" : ""}`}>
         <Footer></Footer>
       </div>
     </div>

@@ -4,16 +4,14 @@ import {
   InstagramLogoIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  ArrowDownIcon,
 } from "@radix-ui/react-icons";
-import GoToButton from "./GoToButton";
 
 const HomeHero = () => {
   return (
-    <div className="mx-[10vw] relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6  max-w-7xl  mb-24 h-auto md:pt-12 xl:pt-24 lg:min-h-[40rem] lg:pb-12 lg:mb-64 gap-y-10">
-      <div className="col-span-full lg:col-start-1 lg:row-start-1 lg:flex lg:h-full lg:flex-col lg:col-span-5">
+    <div className="mx-[10vw] xl:mx-auto max-w-7xl relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 h-auto md:pt-12 xl:pt-24 lg:min-h-[40rem]   gap-y-10">
+      <div className="col-span-full lg:col-start-1 lg:row-start-1 lg:flex lg:h-full lg:flex-col lg:col-span-5 ">
         <p
-          className="text-3xl md:text-4xl xl:text-5xl w-[320px] md:w-[480px] mb-5 leading-tight font-light"
+          className="text-3xl md:text-4xl xl:text-5xl  leading-tight  mb-5 font-light  "
           data-aos="fade-up"
         >
           Always passionate in what I am doing. Keep learning and growing in all
@@ -25,7 +23,7 @@ const HomeHero = () => {
           christian...
         </p>
         <div className="flex flex-col space-y-5 mb-5">
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <button
               data-aos="fade-up"
               data-aos-delay="400"
@@ -33,7 +31,7 @@ const HomeHero = () => {
             >
               Read the blog
             </button>
-          </Link>
+          </Link> */}
           <Link href="/about">
             <button
               data-aos="fade-up"
@@ -68,12 +66,10 @@ const HomeHero = () => {
           direction="down"
         ></GoToButton> */}
       </div>
-      <div className="flex items-center justify-center mb-12 col-span-full lg:mb-0 lg:col-span-7 lg:col-start-6 lg:-mt-24 lg:-mr-5vw lg:px-0">
-        <img
-          data-aos="fade"
-          src="/icon-512x512.png"
-          className="animate-bounceIn rounded-full shadow-lg shadow-black/50 mb-3 w-[280px] h-[280px] md:w-[400px] md:h-[400px]"
-        ></img>
+      <div className="relative col-span-full lg:mb-0 lg:col-span-7 lg:col-start-6 lg:-mt-24 lg:-mr-5vw lg:px-0  h-[300px] md:h-[500px] lg:h-auto">
+        <div className="absolute bg-gray-200 rounded-full w-[280px]  md:w-[400px] xl:w-[500px] aspect-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+          Your image
+        </div>
       </div>
     </div>
   );

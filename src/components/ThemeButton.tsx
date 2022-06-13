@@ -5,6 +5,7 @@ import { useTheme } from "../contexts/theme";
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
   const { setShowMenu } = useLayout();
+  return <></>;
   return (
     <button
       onClick={() => {
@@ -12,7 +13,7 @@ const ThemeButton = () => {
         setShowMenu(false);
       }}
       // change to flex when show
-      className="hidden  rounded-full dark:hover:bg-yellow-100/30 hover:bg-gray-300/30 transition ease-in-out duration-300 w-12 h-12 border-2 border-gray-600/20 hover:border-gray-600 dark:border-yellow-500/20 dark:hover:border-yellow-500 overflow-hidden  items-center justify-center"
+      className=" flex rounded-full dark:hover:bg-yellow-100/30 hover:bg-gray-300/30 transition ease-in-out duration-300 w-12 h-12 border-2 border-gray-600/20 hover:border-gray-600 dark:border-yellow-500/20 dark:hover:border-yellow-500 overflow-hidden  items-center justify-center"
     >
       {theme == "dark" ? (
         <Sun className="text-yellow-500" data-aos="fade-down"></Sun>

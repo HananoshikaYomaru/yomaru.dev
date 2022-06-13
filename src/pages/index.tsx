@@ -1,16 +1,14 @@
 import type { NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { trpc } from "../utils/trpc";
-import Link from "next/link";
 import userConfig from "../../i18next.config.js";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { feedback } from "../zodSchema/feedback";
-import { useEffect, useState } from "react";
-import Pusher from "pusher-js";
 import Layout from "../components/Layout";
-import HomeHero from "../components/HomeHero";
+import HomeHero from "../components/Index/HomeHero";
+import CurrentFocus from "../components/Index/CurrentFocus";
+import TechStack from "../components/Index/TechStack";
+import Obsidian from "../components/Index/Obsidian";
+import Work from "../components/Index/Work";
+import GoToButton from "../components/GoToButton";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
@@ -18,7 +16,18 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <HomeHero></HomeHero>
-      {/* form */}
+      <CurrentFocus></CurrentFocus>
+      {/* <SkillGraph></SkillGraph> */}
+      <TechStack></TechStack>
+      <Obsidian></Obsidian>
+      <Work></Work>
+      <div className="mx-[12vw] mt-24 xl:mt-36 flex items-center justify-center">
+        <GoToButton
+          text="Learn more about yomaru"
+          direction="right"
+          href="/about"
+        ></GoToButton>
+      </div>
     </Layout>
   );
 };

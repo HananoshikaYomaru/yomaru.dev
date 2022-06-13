@@ -2,7 +2,7 @@ import GoToButton from "../GoToButton";
 
 const SeeBlog = () => {
   return (
-    <div className="hidden mx-[12vw] mt-24 lg:mt-36">
+    <div className=" mx-[12vw] mt-24 lg:mt-36">
       <div className="col-span-full flex flex-col  lg:flex-row items-start lg:justify-between ">
         <p className="leading-tight text-3xl md:text-4xl text-black dark:text-white mb-5 lg:mb-0">
           Have a look at my writing.

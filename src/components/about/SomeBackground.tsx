@@ -7,7 +7,7 @@ const SomeBackground = () => {
         Some background about me
       </div>
       {/* <div className="rounded bg-gray-200 col-span-full lg:col-span-3 lg:row-start-2 lg:col-start-1 m-10 shadow-lg"></div> */}
-      <div className="text-lg  w-[76vw] md:w-auto text-justify prose md:max-w-none col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1  lg:row-span-2">
+      <div className="text-lg  w-[76vw] md:w-auto  prose md:max-w-none col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1  lg:row-span-2">
         <p>
           I am a {moment().diff(moment("1999-08-27"), "years")} year old
           software engineer based in Hong Kong. I had two bachelor degrees, one
@@ -46,11 +46,11 @@ const SomeBackground = () => {
           executive power etc. I am really grateful for all these good comments
           from my friends, family, and colleagues. I am an instinctive learner,
           which means I can see what I truly need, develop a detailed plan and
-          then go to them with passion somehow instinctively. As Steve Jobs
+          then go for them with passion somehow instinctively. As Steve Jobs
           said, I am already naked, there is no reason not to follow my heart. I
           am not stopping because I believe there is a much bigger mission for
           me to fulfill. I will continue learning and growing into a better
-          person and help create a world for people that I love.
+          person and help create a better world for people I love.
         </p>
       </div>
     </div>

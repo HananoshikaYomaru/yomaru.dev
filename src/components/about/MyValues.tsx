@@ -17,7 +17,7 @@ const MyValues = () => {
         <p className="max-w-full text-lg  mb-12 prose prose-light dark:prose-dark">
           You can be the smartest and most skilled software engineer in the
           world, but if you&apos;re not kind to those with whom you interact,
-          you&apos;ll never reach your full potential. Havng good relationship
+          you&apos;ll never reach your full potential. Having good relationship
           in a team makes things run smoother, knowledges become more shareable,
           which make your products even better. Having bad relationship in a
           work environment is always the fastest way to ruin a team. Also, in
@@ -36,7 +36,7 @@ const MyValues = () => {
           more obvious in the technology areas. A good product requires high
           build quality, quick and accurate go-to-market strategies and endless
           maintanence to be successful. Without a good team, nothing great can
-          be achieved. Learn from each other, grow with each other, cheers with
+          be achieved. Learn from each other, grow with each other, cheer with
           each other.
         </p>
         <p className="text-lg font-medium text-black dark:text-white mb-4">

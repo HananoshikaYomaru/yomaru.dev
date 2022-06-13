@@ -5,7 +5,7 @@ import FunFacts from "../components/about/FunFacts";
 import MyValues from "../components/about/MyValues";
 import SomeBackground from "../components/about/SomeBackground";
 import AboutHero from "../components/about/AboutHero";
-import SeeBlog from "../components/about/SeeBlog";
+
 const Home = () => {
   return (
     <Layout>
@@ -22,7 +22,7 @@ const Home = () => {
       <FunFacts></FunFacts>
 
       {/* see my blog */}
-      <SeeBlog></SeeBlog>
+      {/* <SeeBlog></SeeBlog> */}
 
       {/* <CloudinaryImg publicId="yomaru.dev/A62C9231-1362-41C9-9B5D-C557AFD637FB_gdwcn2"></CloudinaryImg> */}
     </Layout>
