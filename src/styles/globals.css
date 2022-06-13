@@ -48,13 +48,17 @@ a.animate-underline-right {
   background-position: right bottom;
 }
 
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
 .focus-ring:hover,
 .focus-ring:focus {
   @apply ring-2 ring-offset-4 ring-black dark:ring-white dark:ring-offset-gray-900 shadow-lg shadow-black/30 dark:shadow-white/50;
 }
 
 .animate-bouncing:hover svg {
-  @apply animate-twBounce animate-infinite;
+  @apply animate-bounce;
 }
 
 .animate-bouncing:hover button {

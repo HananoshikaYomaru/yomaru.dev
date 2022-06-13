@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@antv/g6": "^4.6.4",
     "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@hookform/resolvers": "^2.8.8",
@@ -22,6 +23,8 @@
     "ahooks": "^3.4.1",
     "algoliasearch": "^4.13.0",
     "aos": "^2.3.4",
+    "cloudinary-build-url": "^0.2.4",
+    "moment": "^2.29.3",
     "next": "^12.1.6",
     "next-i18next": "^11.0.0",
     "next-pwa": "^5.5.2",
@@ -35,13 +38,18 @@
     "react-instantsearch-hooks": "^6.24.0",
     "react-instantsearch-hooks-web": "^6.24.0",
     "react-markdown": "^8.0.3",
+    "react-masonry-css": "^1.0.16",
     "react-query": "^3.38.0",
+    "react-responsive": "^9.0.0-beta.10",
     "react-svg-blob": "^0.3.0",
+    "react-twemoji": "^0.5.0",
     "tabler-icons-react": "^1.48.1",
     "three": "^0.140.0",
+    "usehooks-ts": "^2.5.4",
     "zod": "^3.14.4"
   },
   "devDependencies": {
+    "@cld-apis/types": "^0.1.6",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -51,6 +59,7 @@
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
     "@types/react-instantsearch-dom": "^6.12.3",
+    "@types/react-twemoji": "^0.4.0",
     "animated-tailwindcss": "^3.2.7",
     "autoprefixer": "^10.4.5",
     "eslint": "8.14.0",

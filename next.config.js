@@ -5,6 +5,9 @@ import withPWA from "next-pwa"
 const nextConfig = withPWA({
   reactStrictMode: true,
   ...userConfig,
+  images: {
+    domains: ["res.cloudinary.com"]
+  },
   pwa: {
     dest: 'public'
   }
