@@ -1,9 +1,15 @@
+import CloudinaryImg from "../CloudinaryImg";
+
 const MyValues = () => {
   return (
     <div className="mt-36 mx-[12vw] grid grid-cols-1 lg:grid-cols-2 gap-12 ">
       {/* image */}
-      <div className="col-span-full row-start-1 lg:col-span-1 lg:col-start-2 bg-gray-200  rounded-lg aspect-[3/4] mb-12 lg:mb-0 w-[88%] place-self-center flex justify-center items-center">
-        your happy face
+      <div className="overflow-hidden col-span-full row-start-1 lg:col-span-1 lg:col-start-2 bg-gray-200  rounded-lg aspect-[3/4] mb-12 lg:mb-0 w-[88%] place-self-center flex justify-center items-center">
+        <CloudinaryImg
+          publicId="yomaru.dev/personal/IMG_4787_i61vlk.webp"
+          width="900"
+          height="1200"
+        ></CloudinaryImg>
       </div>
 
       {/* text  */}
@@ -33,7 +39,7 @@ const MyValues = () => {
           as well as in the open source community. I&apos;ve found it to be
           invaluable to collaborate well with others because one can never
           achieve something great without the help of others. This wisdom is
-          more obvious in the technology areas. A good product requires high
+          more applicable in the technology areas. A good product requires high
           build quality, quick and accurate go-to-market strategies and endless
           maintanence to be successful. Without a good team, nothing great can
           be achieved. Learn from each other, grow with each other, cheer with

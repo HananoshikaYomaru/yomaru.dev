@@ -5,6 +5,13 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
+import CloudinaryImg from "../CloudinaryImg";
+import {
+  github,
+  instagram,
+  linkedIn,
+  twitter,
+} from "../../utils/externalLinks";
 
 const HomeHero = () => {
   return (
@@ -33,29 +40,45 @@ const HomeHero = () => {
             </button>
           </Link> */}
           <Link href="/about">
-            <button
-              data-aos="fade-up"
-              data-aos-delay="400"
-              className="px-6 py-3 d:px-10 md:py-5 text-md md:text-lg  font-bold text-white transition ease-in-out bg-black rounded-full focus-ring w-min whitespace-nowrap hover:bg-gray-900 dark:bg-white dark:hover:bg-gray-200 dark:text-gray-800"
-            >
+            <button className="px-6 py-3 d:px-10 md:py-5 text-md md:text-lg  font-bold text-white transition ease-in-out bg-black rounded-full focus-ring w-min whitespace-nowrap hover:bg-gray-900 dark:bg-white dark:hover:bg-gray-200 dark:text-gray-800 ">
               Learn more about me
             </button>
           </Link>
           <div className="flex flex-col flex-start md:flex-row md:items-center ">
             <span>Follow me on</span>
-            <span className="flex flex-row mt-3 md:ml-5 space-x-3">
-              <button className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 ">
+            <span className="flex flex-row mt-3 md:mt-0 md:ml-5 space-x-3">
+              <a
+                className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 "
+                href={twitter}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TwitterLogoIcon />
-              </button>
-              <button className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 ">
+              </a>
+              <a
+                className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 "
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <InstagramLogoIcon />
-              </button>
-              <button className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 ">
+              </a>
+              <a
+                className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 "
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <GitHubLogoIcon />
-              </button>
-              <button className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 ">
+              </a>
+              <a
+                className="p-3 transition ease-in-out border border-gray-200 rounded-full hover:bg-gray-100 hover:border-gray-600 "
+                href={linkedIn}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkedInLogoIcon />
-              </button>
+              </a>
             </span>
           </div>
         </div>
@@ -67,8 +90,12 @@ const HomeHero = () => {
         ></GoToButton> */}
       </div>
       <div className="relative col-span-full lg:mb-0 lg:col-span-7 lg:col-start-6 lg:-mt-24 lg:-mr-5vw lg:px-0  h-[300px] md:h-[500px] lg:h-auto">
-        <div className="absolute bg-gray-200 rounded-full w-[280px]  md:w-[400px] xl:w-[500px] aspect-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-          Your image
+        <div className="absolute bg-gray-200 rounded-full w-[280px]  md:w-[400px] xl:w-[500px] aspect-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center overflow-hidden">
+          <CloudinaryImg
+            publicId="yomaru.dev/personal/IMG_4787_i61vlk.webp"
+            width={2123}
+            height={2123}
+          ></CloudinaryImg>
         </div>
       </div>
     </div>

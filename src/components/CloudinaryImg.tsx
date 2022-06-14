@@ -6,25 +6,30 @@ import { buildUrl } from "cloudinary-build-url";
 
 import Image from "next/image";
 
+export const extractPublicId = (url : string ) : string => { 
+  return /yomaru.dev\/(.*?)+/.exec(url) ?.[0] || ""
+} 
+
 type Props = {
   publicId: string;
   height?: string | number;
   width?: string | number;
+  layout?: string;
   alt?: string;
-  aspect?: {
-    height: number | string;
-    width: number | string;
-  };
+  x?: number;
+  y?: number;
 };
 
 /**
- * default `height` and `width` is 300px
+ * if you only have the link, you need to use the `extractPublicId` methods
  */
 const CloudinaryImg = ({
   publicId,
-  aspect,
-  width = 300,
-  height = 300,
+  width,
+  height,
+  x,
+  y,
+  layout,
   alt,
 }: Props) => {
   const url = buildUrl(publicId, {
@@ -32,14 +37,27 @@ const CloudinaryImg = ({
       cloudName: "yomaru",
     },
     transformations: {
-      rawTransformation: aspect
-        ? `c_fill,ar_${aspect.width}:${aspect.height},w_${width}`
-        : undefined,
+      resize : width && height ? { 
+        type: "fill" , 
+        width : width , 
+        height : height ,
+         aspectRatio : `${width}:${height}`
+      } : undefined,  
+      position:  x && y ? { 
+        x : x , 
+        y : y 
+      }: undefined
     },
   });
 
   return (
-    <Image width={width} height={height} src={url} alt={alt} title={alt} />
+    <div className="relative h-full w-full">
+      {width && height && layout != "fill" ? (
+        <Image width={width} height={height} src={url} alt={alt} title={alt} />
+      ) : (
+        <Image layout="fill" src={url} alt={alt} objectFit="cover"></Image>
+      )}
+    </div>
   );
 };
 

@@ -5,6 +5,13 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import { Rss } from "tabler-icons-react";
+import {
+  github,
+  instagram,
+  linkedIn,
+  little_tea,
+  twitter,
+} from "../utils/externalLinks";
 import { sitemap } from "./Header";
 
 const Footer = () => {
@@ -17,11 +24,21 @@ const Footer = () => {
             Software Engineer creating great products
           </p>
           <div className="flex flex-row space-x-5">
-            <InstagramLogoIcon className="w-8 h-8" />
-            <TwitterLogoIcon className="w-8 h-8"></TwitterLogoIcon>
-            <GitHubLogoIcon className="w-8 h-8"></GitHubLogoIcon>
-            <LinkedInLogoIcon className="w-8 h-8"></LinkedInLogoIcon>
-            <Rss className="w-8 h-8"></Rss>
+            <a href={instagram} target="_blank" rel="noreferrer">
+              <InstagramLogoIcon className="w-8 h-8"></InstagramLogoIcon>
+            </a>
+            <a href={twitter} target="_blank" rel="noreferrer">
+              <TwitterLogoIcon className="w-8 h-8"></TwitterLogoIcon>
+            </a>
+            <a href={github} target="_blank" rel="noreferrer">
+              <GitHubLogoIcon className="w-8 h-8"></GitHubLogoIcon>
+            </a>
+            <a href={linkedIn} target="_blank" rel="noreferrer">
+              <LinkedInLogoIcon className="w-8 h-8"></LinkedInLogoIcon>
+            </a>
+            <a href={little_tea} target="_blank" rel="noreferrer">
+              <Rss className="w-8 h-8"></Rss>
+            </a>
           </div>
         </div>
         <div className="col-span-6 col-start-1 row-start-2 md:col-span-3 md:col-start-8 md:row-start-1 xl:col-span-2 xl:col-start-5 xl:row-start-1">

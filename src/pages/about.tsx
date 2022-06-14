@@ -5,6 +5,7 @@ import FunFacts from "../components/about/FunFacts";
 import MyValues from "../components/about/MyValues";
 import SomeBackground from "../components/about/SomeBackground";
 import AboutHero from "../components/about/AboutHero";
+import CloudinaryImg from "../components/CloudinaryImg";
 
 const Home = () => {
   return (
@@ -14,7 +15,15 @@ const Home = () => {
       <SomeBackground></SomeBackground>
       {/* my values */}
       <MyValues></MyValues>
-
+      <div className=" mx-[12vw] lg:hidden ">
+        <div className="rounded-lg bg-gray-200 w-full aspect-[4/3] overflow-hidden">
+          <CloudinaryImg
+            publicId="yomaru.dev/personal/IMG_0725_ot7wlv.webp"
+            width={1200}
+            height={900}
+          ></CloudinaryImg>
+        </div>
+      </div>
       {/* good qualities */}
       <GoodQualities></GoodQualities>
 

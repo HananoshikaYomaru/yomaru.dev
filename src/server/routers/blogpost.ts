@@ -3,18 +3,18 @@ import { z } from "zod";
 import {
   getAllPostsWithSlug,
   getPostAndMorePosts,
-  getPreviewPostBySlug,
-} from "../../utils/blogpost";
+  getPostBySlug,
+} from "../../utils/contentful/blogpost";
 
-export const blogpostRouter = createRouter()
-  .query("all", {
+export const blogPostRouter = createRouter()
+  .query("getAllPostsWithSlug", {
     resolve: async () => {
       console.log("getting posts...");
       const posts = await getAllPostsWithSlug();
       return posts;
     },
   })
-  .query("byId", {
+  .query("getPostAndMorePosts", {
     input: z.object({
       slug: z.string().nonempty(),
     }),
@@ -24,3 +24,6 @@ export const blogpostRouter = createRouter()
       return response;
     },
   });
+
+  // export type definition of API
+export type BlogPostRouter = typeof blogPostRouter;

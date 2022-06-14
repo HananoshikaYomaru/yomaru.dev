@@ -11,7 +11,7 @@ const GoToButton = ({ text, href, direction = "right" }: Props) => {
   return (
     <Link href={href}>
       <a
-        className={`flex flex-row  items-center text-left font-medium focus:outline-none cursor-pointer transition space-x-3`}
+        className={`flex flex-row  items-center text-left font-medium focus:outline-none cursor-pointer transition space-x-3 w-fit`}
       >
         <>
           <p className="textlg md:text-xl font-medium whitespace-nowrap ">
