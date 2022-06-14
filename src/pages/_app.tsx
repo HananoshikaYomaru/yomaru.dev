@@ -63,6 +63,8 @@ export default withTRPC<AppRouter>({
   },
   /**
    * @link https://trpc.io/docs/ssr
+   * You can't use getServerSideProps or getStaticProps with ssr: true
+   * https://github.com/trpc/trpc/discussions/1847#discussioncomment-2656586
    */
-  ssr: true,
+  ssr: false,
 })(appWithTranslation(MyApp));

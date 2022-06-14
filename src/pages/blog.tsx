@@ -66,11 +66,14 @@ const CustomHits = () => {
 };
 
 const Home = () => {
-  // const posts = trpc.useQuery(["blogpost.all"], {
-  //   onSuccess: () => {
-  //     console.log("successfully fetch posts ");
-  //   },
-  // });
+  const posts = trpc.useQuery(["blogpost.getAllPostsWithSlug"], {
+    onSuccess: () => {
+      console.log("successfully fetch posts ");
+    },
+    onError : (error) => {
+      console.log(error.message)
+    }
+  });
   const { t } = useTranslation("common");
   return (
     <Layout>

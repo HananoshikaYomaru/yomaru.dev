@@ -1,7 +1,14 @@
-import { createReactQueryHooks } from "@trpc/react";
+import { createReactQueryHooks, createTRPCClient } from "@trpc/react";
 import type { AppRouter } from "../server/routers/_app";
 import type { inferProcedureOutput } from "@trpc/server";
 
+
+
+
+/**
+ * use this hook in any react components to query 
+ * https://trpc.io/docs/nextjs#4-create-trpc-hooks
+ */
 export const trpc = createReactQueryHooks<AppRouter>();
 
 // export const transformer = superjson;
@@ -12,3 +19,12 @@ export const trpc = createReactQueryHooks<AppRouter>();
 export type inferQueryOutput<
   TRouteKey extends keyof AppRouter["_def"]["queries"]
 > = inferProcedureOutput<AppRouter["_def"]["queries"][TRouteKey]>;
+
+/**
+ * this is a vallina trpc js client 
+ */
+export const trpcClient = createTRPCClient<AppRouter>({
+  url : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}/api/trpc`
+  : "http://localhost:3000/api/trpc"
+} )

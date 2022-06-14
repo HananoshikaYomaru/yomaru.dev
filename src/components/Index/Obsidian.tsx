@@ -1,3 +1,5 @@
+import CloudinaryImg from "../CloudinaryImg";
+
 const Obsidian = () => {
   return (
     <div className="mx-[12vw] mt-24 xl:mt-36 grid grid-cols-1 lg:grid-cols-2 gap-12 ">
@@ -8,7 +10,7 @@ const Obsidian = () => {
         <div className="text-lg lg:text-xl prose">
           <p>
             I learn new things every day. To consolidate my new knowledges, I
-            link them with existing knowledges using Graph. I am an expert user
+            link them with existing knowledges using graphical linkage. I am an expert user
             of Obsidian and Zettelkasten method. I created my own scripts and
             plugins to automate my notes and generate reports. I also contribute
             the Obsidian open source community by committing code on Github.
@@ -31,9 +33,15 @@ const Obsidian = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-8">
-        <div className="bg-gray-200 h-64 rounded-lg">Your obsidian vault</div>
-        <div className="bg-gray-200 h-64 rounded-lg">Your reports</div>
-        <div className="bg-gray-200 h-64 rounded-lg">memex</div>
+        <div className="bg-gray-200 h-64 rounded-lg overflow-hidden border">
+        <CloudinaryImg publicId="v1655200934/yomaru.dev/personal/CleanShot_2022-06-14_at_18.01.23_grv8ux.png" layout="fill"></CloudinaryImg>
+        </div>
+        <div className="bg-gray-200 h-64 rounded-lg overflow-hidden border"> 
+        <CloudinaryImg publicId="v1655200919/yomaru.dev/personal/signal-2022-01-23-234807_001_crz6cg.png" layout="fill" y={100}></CloudinaryImg>
+        </div>
+        <div className="bg-gray-200 h-64 rounded-lg overflow-hidden border">
+          <CloudinaryImg publicId="v1655201210/yomaru.dev/personal/CleanShot_2022-06-14_at_18.06.34_n8fnfa.png" layout="fill"></CloudinaryImg>
+        </div>
       </div>
     </div>
   );

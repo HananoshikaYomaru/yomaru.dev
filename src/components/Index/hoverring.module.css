@@ -1,0 +1,3 @@
+.root:hover .target {
+  @apply ring-2 ring-offset-2 ring-black transition;
+}

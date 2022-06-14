@@ -1,4 +1,4 @@
-import moment from "moment";
+import {DateTime} from "luxon"
 
 const SomeBackground = () => {
   return (
@@ -9,7 +9,7 @@ const SomeBackground = () => {
       {/* <div className="rounded bg-gray-200 col-span-full lg:col-span-3 lg:row-start-2 lg:col-start-1 m-10 shadow-lg"></div> */}
       <div className="text-lg  w-[76vw] md:w-auto  prose md:max-w-none col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1  lg:row-span-2">
         <p>
-          I am a {moment().diff(moment("1999-08-27"), "years")} year old
+          I am a {DateTime.now().diff(DateTime.fromFormat("1999-08-27" , "YYYY-MM-DD")).years} year old
           software engineer based in Hong Kong. My Chinese name is Yeung Man
           Lung, English Name is Ken. But I prefer my Japanese name, Hananoshika
           Yomaru, more, which I took for myself and use it in public profiles. I
