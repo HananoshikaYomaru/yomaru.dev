@@ -20,7 +20,6 @@ import { prism, okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { slug, trpcState } = props;
-  trpcState.queries;
   const query = trpc.useQuery(["work.getWorkBySlug", { slug }]);
   if (query.status != "success") {
     return <>Loading...</>;
