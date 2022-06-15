@@ -6,6 +6,7 @@ import hoverring from "../Index/hoverring.module.css";
 import { Work } from "../../utils/contentful/work";
 
 import CloudinaryImg, { extractPublicId } from "../CloudinaryImg";
+import { useWork } from "../../contexts/work";
 
 type CardProps = {
   hiddenSm?: boolean;
@@ -42,11 +43,12 @@ export const WorkCard = ({ hiddenSm = false, ...work }: CardProps) => {
 };
 
 const WorkCards = () => {
-  const query = trpc.useQuery(["work.getAllWorkWithSlug", {}]);
-  if (query.status != "success") {
-    return <>Loading...</>;
-  }
-  const { data: works } = query;
+  // const query = trpc.useQuery(["work.getAllWorkWithSlug", {}]);
+  // if (query.status != "success") {
+  //   return <>Loading...</>;
+  // }
+  // const { data: works } = query;
+  let { works } = useWork();
   return (
     <div className="mx-[12vw] mt-24 xl:mt-36">
       <p className="text-4xl xl:text-5xl">All my previous work</p>

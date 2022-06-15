@@ -19,13 +19,14 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism, okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { slug, trpcState } = props;
-  trpcState.queries;
-  const query = trpc.useQuery(["work.getWorkBySlug", { slug }]);
-  if (query.status != "success") {
-    return <>Loading...</>;
-  }
-  const { data: work } = query;
+  let { work } = props;
+  // const query = trpc.useQuery(["work.getWorkBySlug", { slug: work.slug }]);
+  // if (query.status != "success") {
+  //   return <>Loading...</>;
+  // }
+  // if (!work) {
+  //   work = query.data;
+  // }
   const publishAt = DateTime.fromISO(work.sys.firstPublishedAt);
   return (
     <Layout>
@@ -98,7 +99,7 @@ export async function getStaticProps(
   const slug = context.params?.slug as string;
 
   // prefetch `work.byId`
-  await ssg.fetchQuery("getWorkBySlug", {
+  const work = await ssg.fetchQuery("getWorkBySlug", {
     slug,
   });
 
@@ -107,7 +108,7 @@ export async function getStaticProps(
   return {
     props: {
       trpcState: ssg.dehydrate(),
-      slug,
+      work,
     },
     revalidate: 1,
   };
