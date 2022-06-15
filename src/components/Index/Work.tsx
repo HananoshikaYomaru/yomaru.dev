@@ -1,12 +1,15 @@
 import GoToButton from "../GoToButton";
 import { WorkCard } from "../work/WordCards";
 import { trpc } from "../../utils/trpc";
+import { useWork } from "../../contexts/work";
+
 const Work = () => {
-  const query = trpc.useQuery(["work.getAllWorkWithSlug" , {limit : 3} ])
-  if ( query .status != "success"){ 
-    return <>Loading...</>
-  }
-  const {data: works } = query 
+  // const query = trpc.useQuery(["work.getAllWorkWithSlug" , {limit : 3} ])
+  // if ( query .status != "success"){
+  //   return <>Loading...</>
+  // }
+  // const {data: works } = query
+  const { works } = useWork();
   return (
     <div className="mx-[12vw] mt-24 xl:mt-36">
       <p className="text-4xl text-black mb-6">
@@ -15,10 +18,10 @@ const Work = () => {
       <p className="text-lg lg:text-xl mb-6">
         When I was still studying in the university, I already helped companies
         create software applications by taking freelance, part time and
-        internship. I learn by experience. Sometimes I can discover new areas and
-        see if that area is suitable for me. Although usually I work in small
-        teams, I always aim for production level so that I can make the most out
-        of it. I also made a lot of good relationships.
+        internship. I learn by experience. Sometimes I can discover new areas
+        and see if that area is suitable for me. Although usually I work in
+        small teams, I always aim for production level so that I can make the
+        most out of it. I also made a lot of good relationships.
       </p>
       <GoToButton
         direction="right"
@@ -29,7 +32,6 @@ const Work = () => {
         <WorkCard {...works[0]}></WorkCard>
         <WorkCard {...works[1]}></WorkCard>
         <WorkCard {...works[2]} hiddenSm></WorkCard>
-        
       </div>
     </div>
   );

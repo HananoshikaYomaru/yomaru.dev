@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import userConfig from "../../i18next.config.js";
@@ -12,9 +12,12 @@ import GoToButton from "../components/GoToButton";
 import { createSSGHelpers } from "@trpc/react/ssg";
 import { workRouter } from "../server/routers/work";
 import { createContext } from "../server/context";
+import React from "react";
+import { WorkProvider } from "../contexts/work";
 
-const Home: NextPage = () => {
+const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
+  let { works } = props;
 
   return (
     <Layout>
@@ -23,7 +26,9 @@ const Home: NextPage = () => {
       {/* <SkillGraph></SkillGraph> */}
       <TechStack></TechStack>
       <Obsidian></Obsidian>
-      <Work></Work>
+      <WorkProvider works={works}>
+        <Work></Work>
+      </WorkProvider>
       <div className="mx-[12vw] mt-24 xl:mt-36 flex items-center justify-center">
         <GoToButton
           text="Learn more about yomaru"
@@ -44,7 +49,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   });
 
   // prefetch `work.byId`
-  await ssg.fetchQuery("getAllWorkWithSlug", {
+  const works = await ssg.fetchQuery("getAllWorkWithSlug", {
     limit: 3,
   });
 
@@ -53,6 +58,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
       trpcState: ssg.dehydrate(),
+      works: works,
       ...(await serverSideTranslations(locale, ["common"], userConfig)),
     },
 
