@@ -6,9 +6,9 @@ import { buildUrl } from "cloudinary-build-url";
 
 import Image from "next/image";
 
-export const extractPublicId = (url : string ) : string => { 
-  return /yomaru.dev\/(.*?)+/.exec(url) ?.[0] || ""
-} 
+export const extractPublicId = (url: string): string => {
+  return /yomaru.dev\/(.*?)+/.exec(url)?.[0] || "";
+};
 
 type Props = {
   publicId: string;
@@ -37,16 +37,22 @@ const CloudinaryImg = ({
       cloudName: "yomaru",
     },
     transformations: {
-      resize : width && height ? { 
-        type: "fill" , 
-        width : width , 
-        height : height ,
-         aspectRatio : `${width}:${height}`
-      } : undefined,  
-      position:  x && y ? { 
-        x : x , 
-        y : y 
-      }: undefined
+      resize:
+        width && height
+          ? {
+              type: "fill",
+              width: width,
+              height: height,
+              aspectRatio: `${width}:${height}`,
+            }
+          : undefined,
+      position:
+        x && y
+          ? {
+              x: x,
+              y: y,
+            }
+          : undefined,
     },
   });
 

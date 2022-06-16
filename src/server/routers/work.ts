@@ -14,7 +14,6 @@ export const workRouter = createRouter()
     resolve: async ({ input }) => {
       const { limit } = input;
       const works = await getAllWorkWithSlug(limit);
-      console.log("getting works...", works);
       return works;
     },
   })
