@@ -10,7 +10,7 @@ type CardProps = {
 
 const Card = ({ title, description, publicId }: CardProps) => {
   return (
-    <div className="bg-gray-200 rounded-lg h-56 md:h-72 lg:h-96  xl:aspect-[5/3]  w-full  grid grid-cols-8 gap-4 p-3 md:p-5 lg:p-8 place-items-center ">
+    <div className="bg-gray-200 rounded-lg h-56 md:h-[312px] lg:h-[440px]  xl:aspect-[5/3]  w-full  grid grid-cols-8 gap-4 p-3 md:p-5 lg:p-8 place-items-center ">
       <div
         className={`col-span-4  md:col-span-3 place-self-stretch ${square.root} `}
       >
