@@ -1,0 +1,11 @@
+.root {
+  @apply flex flex-row items-center justify-center overflow-hidden;
+}
+
+.root > div {
+  @apply flex flex-col items-center justify-center  self-stretch max-w-full max-h-full aspect-1 overflow-hidden;
+}
+
+.root > div > div {
+  @apply aspect-1 self-stretch;
+}

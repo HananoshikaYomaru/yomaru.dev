@@ -1,5 +1,5 @@
-import Twemoji from "react-twemoji";
 import CloudinaryImg from "../CloudinaryImg";
+import square from "./square.module.css";
 
 type CardProps = {
   title: string;
@@ -10,14 +10,18 @@ type CardProps = {
 
 const Card = ({ title, description, publicId }: CardProps) => {
   return (
-    <div className="bg-gray-200 rounded-lg h-56 md:h-72 lg:h-96  xl:aspect-[5/3]  w-full  grid grid-cols-8 gap-4 p-3 md:p-5 lg:p-8 place-items-center">
-      <div className="col-span-4  md:col-span-3 place-self-stretch flex-center">
-        <div className="w-full aspect-1 rounded-full  flex-center overflow-hidden">
-          <CloudinaryImg
-            publicId={publicId}
-            width={300}
-            height={300}
-          ></CloudinaryImg>
+    <div className="bg-gray-200 rounded-lg h-56 md:h-[312px] lg:h-[440px]  xl:aspect-[5/3]  w-full  grid grid-cols-8 gap-4 p-3 md:p-5 lg:p-8 place-items-center ">
+      <div
+        className={`col-span-4  md:col-span-3 place-self-stretch ${square.root} `}
+      >
+        <div>
+          <div className="rounded-full overflow-hidden">
+            <CloudinaryImg
+              publicId={publicId}
+              width={1000}
+              height={1000}
+            ></CloudinaryImg>
+          </div>
         </div>
       </div>
       <div className="col-span-4 md:col-span-5  flex flex-col ">
@@ -81,7 +85,7 @@ const FunFacts = () => {
       <p className="leading-tight text-3xl md:text-4xl text-gray-400 dark:text-blueGray-500">
         Some unique things about me.
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-16">
         {facts.map((fact) => {
           return <Card key={fact.title} {...fact}></Card>;
         })}
