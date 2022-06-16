@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { trpc } from "../../utils/trpc";
 import { DateTime } from "luxon";
 import hoverring from "../Index/hoverring.module.css";
 
@@ -14,8 +13,8 @@ type CardProps = {
 
 export const WorkCard = ({ hiddenSm = false, ...work }: CardProps) => {
   const { title, slug, bannerImage } = work;
-  const startTime = DateTime.fromISO(work.startTime);
-  const endTime = DateTime.fromISO(work.endTime);
+  const startTime = DateTime.fromISO(work.startTime).setLocale("en-US");
+  const endTime = DateTime.fromISO(work.endTime).setLocale("en-US");
   const period = `${startTime.monthLong} ${startTime.year} - ${endTime.monthLong} ${endTime.year}`;
   return (
     <a
