@@ -1,6 +1,12 @@
-import {DateTime} from "luxon"
+import { DateTime } from "luxon";
 
 const SomeBackground = () => {
+  const age = Math.floor(
+    DateTime.now().diff(
+      DateTime.fromFormat("1999-08-27", "yyyy-MM-dd"),
+      "years"
+    ).years
+  );
   return (
     <div className="grid grid-cols-8 mt-24 lg:mt-[200px] gap-x-12 mx-[12vw] ">
       <div className="mb-10 col-span-full lg:col-span-3 text-gray-900 font-semi-bold text-lg">
@@ -9,20 +15,19 @@ const SomeBackground = () => {
       {/* <div className="rounded bg-gray-200 col-span-full lg:col-span-3 lg:row-start-2 lg:col-start-1 m-10 shadow-lg"></div> */}
       <div className="text-lg  w-[76vw] md:w-auto  prose md:max-w-none col-span-full row-start-2 lg:col-span-5 lg:col-start-4 lg:row-start-1  lg:row-span-2">
         <p>
-          I am a {DateTime.now().diff(DateTime.fromFormat("1999-08-27" , "YYYY-MM-DD")).years} year old
-          software engineer based in Hong Kong. My Chinese name is Yeung Man
-          Lung, English Name is Ken. But I prefer my Japanese name, Hananoshika
-          Yomaru, more, which I took for myself and use it in public profiles. I
-          had two bachelor degrees, one BEng degree and one BBA degree. Both of
-          them are from HKUST. During my university life, I found my passion in
-          computer science and I like exploring new trends and new technologies
-          in this field. I am also good at learning by experience. Therefore I
-          have created many little personal projects. Soon I found myself
-          knowing a bit of everything and I can develop some fullstack software
-          by myself. I developed programs not only for myself, but also for
-          friends and companies. I also gained a lot of reputation as being a
-          “tech guy” among my friends. I often provide technical advice and
-          solutions for people I know.
+          I am a {age} year old software engineer based in Hong Kong. My Chinese
+          name is Yeung Man Lung, English Name is Ken. But I prefer my Japanese
+          name, Hananoshika Yomaru, more, which I took for myself and use it in
+          public profiles. I had two bachelor degrees, one BEng degree and one
+          BBA degree. Both of them are from HKUST. During my university life, I
+          found my passion in computer science and I like exploring new trends
+          and new technologies in this field. I am also good at learning by
+          experience. Therefore I have created many little personal projects.
+          Soon I found myself knowing a bit of everything and I can develop some
+          fullstack software by myself. I developed programs not only for
+          myself, but also for friends and companies. I also gained a lot of
+          reputation as being a “tech guy” among my friends. I often provide
+          technical advice and solutions for people I know.
         </p>
 
         <p>
