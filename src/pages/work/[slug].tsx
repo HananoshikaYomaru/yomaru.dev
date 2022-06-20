@@ -45,7 +45,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </p>
         </div>
       </div>
-      <div className="mx-[5vw] lg:mx-[12vw] mt-12 lg:mt-24 bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden">
+      <div className="mx-[5vw] lg:mx-[12vw] mt-12 lg:mt-24 bg-gray-200 aspect-[4/3] lg:aspect-[6/3] rounded-lg overflow-hidden">
         <CloudinaryImg
           publicId={extractPublicId(work.bannerImage[0].url)}
         ></CloudinaryImg>
