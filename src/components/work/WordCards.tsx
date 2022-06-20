@@ -6,6 +6,7 @@ import { Work } from "../../utils/contentful/work";
 
 import CloudinaryImg, { extractPublicId } from "../CloudinaryImg";
 import { useWork } from "../../contexts/work";
+import text from "../../css/text.module.css";
 
 type CardProps = {
   hiddenSm?: boolean;
@@ -50,7 +51,7 @@ const WorkCards = () => {
   let { works } = useWork();
   return (
     <div className="mx-[12vw] mt-24 xl:mt-36">
-      <p className="text-4xl xl:text-5xl">All my previous work</p>
+      <p className={`${text.h1} `}>All my previous work</p>
       <p className="text-lg xl:text-xl">
         I list all my project and work experience here. They can come from any
         context, including course work, personal project, or and a real job.

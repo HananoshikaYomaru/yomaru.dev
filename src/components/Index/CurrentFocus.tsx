@@ -1,7 +1,8 @@
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import CloudinaryImg from "../CloudinaryImg";
-import styles from "./hoverring.module.css";
+import hoverring from "./hoverring.module.css";
+import text from "../../css/text.module.css";
 
 type Interest = {
   title: string;
@@ -12,13 +13,13 @@ type Interest = {
 const Interest = ({ title, href, publicId }: Interest) => {
   return (
     <a
-      className={`focus:outline-none w-full flex flex-col cursor-pointer ${styles.root}`}
+      className={`focus:outline-none w-full flex flex-col cursor-pointer ${hoverring.root}`}
       href={href}
       rel="noreferrer"
       target="_blank"
     >
       <div
-        className={`aspect-[3/4] rounded-lg bg-gray-200  ${styles.target} border overflow-hidden`}
+        className={`aspect-[3/4] rounded-lg bg-gray-200  ${hoverring.target} border overflow-hidden`}
       >
         <CloudinaryImg publicId={publicId} width={600} height={800} />
       </div>
@@ -35,7 +36,7 @@ const Interest = ({ title, href, publicId }: Interest) => {
 const CurrentInterest = () => {
   return (
     <div className="mx-[12vw] mt-12 lg:mt-24 ">
-      <p className="text-4xl">My current interest</p>
+      <p className={`${text.h1}`}>My current interest</p>
       <p className="text-lg md:text-xl mb-12">
         The new things that I am interested in and learning. Click to learn
         more.
