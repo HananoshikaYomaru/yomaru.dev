@@ -90,9 +90,11 @@ const HomeHero = () => {
       <div className="relative col-span-full lg:mb-0 lg:col-span-7 lg:col-start-6 lg:-mt-24 lg:-mr-5vw lg:px-0  h-[300px] md:h-[500px] lg:h-auto">
         <div className="absolute bg-gray-200 rounded-full w-[280px]  md:w-[400px] xl:w-[500px] aspect-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center overflow-hidden">
           <CloudinaryImg
-            publicId="yomaru.dev/personal/IMG_4787_i61vlk.webp"
+            publicId="v1655692271/yomaru.dev/personal/IMG_1362_lly2pq.jpg"
             width={2123}
             height={2123}
+            x={154}
+            y={154}
           ></CloudinaryImg>
         </div>
       </div>
