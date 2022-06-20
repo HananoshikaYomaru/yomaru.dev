@@ -1,0 +1,7 @@
+.h1 {
+  @apply text-3xl md:text-4xl xl:text-5xl  leading-tight  mb-5;
+}
+
+.p2 {
+  @apply md:text-lg;
+}

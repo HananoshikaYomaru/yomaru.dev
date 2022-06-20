@@ -2,6 +2,7 @@ import GoToButton from "../GoToButton";
 import { WorkCard } from "../work/WordCards";
 import { trpc } from "../../utils/trpc";
 import { useWork } from "../../contexts/work";
+import text from "../../css/text.module.css";
 
 const Work = () => {
   // const query = trpc.useQuery(["work.getAllWorkWithSlug" , {limit : 3} ])
@@ -12,7 +13,7 @@ const Work = () => {
   const { works } = useWork();
   return (
     <div className="mx-[12vw] mt-24 xl:mt-36">
-      <p className="text-4xl text-black mb-6">
+      <p className={`${text.h1} mb-6`}>
         Projects and Work. Always aim for production.
       </p>
       <p className="text-lg lg:text-xl mb-6">

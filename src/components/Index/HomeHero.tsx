@@ -12,19 +12,17 @@ import {
   linkedIn,
   twitter,
 } from "../../utils/externalLinks";
+import text from "../../css/text.module.css";
 
 const HomeHero = () => {
   return (
     <div className="mx-[10vw] xl:mx-auto max-w-7xl relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 h-auto md:pt-12 xl:pt-24 lg:min-h-[40rem]   gap-y-10">
       <div className="col-span-full lg:col-start-1 lg:row-start-1 lg:flex lg:h-full lg:flex-col lg:col-span-5 ">
-        <p
-          className="text-3xl md:text-4xl xl:text-5xl  leading-tight  mb-5 font-light  "
-          data-aos="fade-up"
-        >
+        <p className={`${text.h1} font-light`}>
           Always passionate in what I am doing. Keep learning and growing in all
           aspects.
         </p>
-        <p className="mb-5 md:mb-10" data-aos="fade-up" data-aos-delay="200">
+        <p className={`mb-5 md:mb-10 ${text.p2}`}>
           I am a software engineer, full stack + UI/UX developer, open source
           advocate, documentary photographer, Japanese learner, anime lover,
           christian...
