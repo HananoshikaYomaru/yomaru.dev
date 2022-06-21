@@ -58,7 +58,7 @@ function extractWorkEntries( fetchResponse: any ) : Work[ ] {
 export const getAllWorkWithSlug = async (limit?: number ) => { 
     const response  = await fetchGraphQL(`
     query {
-          workExperienceCollection(where:{slug_exists: true} , order: startTime_DESC ${limit? `,limit: ${limit}` : ""}) {
+          workExperienceCollection(where:{slug_exists: true} , order: endTime_DESC ${limit? `,limit: ${limit}` : ""}) {
           items{
             ${WORK_EXPERIENCE_FIELDS}
           }
